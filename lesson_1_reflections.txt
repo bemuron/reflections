@@ -1,0 +1,64 @@
+--How did viewing a diff between two versions of a file help you see the bug that was introduced?
+** It was easy to notice the line where the typo or difference in the two lines was.
+
+--How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+** I am able to see previous changes made to a file. Incase something was deleted/changed by mistake, i can easily
+get it back. It also saves having to write all the code from scracth in case of loss.
+
+Judgment Call
+Choosing when to commit is a judgment call, and it's not always cut-and-dried. When choosing whether to commit, 
+just keep in mind that each commit should have one clear, logical purpose, and you should never do too much work without committing.
+
+Commits: User created checkpoints. Its a snapshot of every file in your repository at the time you choose to make the commit. 
+Are the basic building blocks of git. Each one representing a version of the content at one point
+in time. 
+It's usually a good idea to keep commits small. As the diff between two versions gets bigger, it gets harder to understand 
+and less useful. However, you don’t want to make your commits too small either. If you always save a commit every time you 
+change a line of code, your history will be harder to read since it will have a huge number of commits over a short time period.
+A good rule of thumb is to make one commit per logical change. For example, if you fixed a typo, then fixed a bug in a separate 
+part of the file, you should use one commit for each change since they are logically separate. If you do this, each commit will 
+have one purpose that can be easily understood. Git allows you to write a short message explaining what was changed in each 
+commit, and that message will be more useful if each commit has a single logical change.
+
+--What do you think are the pros and cons of manually choosing when to create a commit, like you do in Git, vs having versions 
+automatically saved, like Google Docs does?
+#Pros
+* each commit is purposeful and not just anything
+* prevents commiting too large ore too small commits
+#cons
+* You may forget to commit
+
+=>You may have a multiple files you want to track together, git calls this collection of files a repository. When you make a commit,
+you will see a version of every file in your repository.
+
+--Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, 
+like Google Docs, treat each file separately?
+** Beacuse some files are related and changes in one will mean changes in the others so it makes sense having multiple files in one commit.
+
+--How can you use the commands git log and git diff to view the history of files?
+** git log will show all previous commits, the person who submitted it and the message. There after you can use git diff to compare 
+the different commits 
+for any changes made between the two versions
+
+Git Errors and Warnings Solution
+
+1. Should not be doing an octopus
+Octopus is a strategy Git uses to combine many different versions of code together. This message can appear if 
+you try to use this strategy in an inappropriate situation.
+
+2. You are in 'detached HEAD' state
+HEAD is what Git calls the commit you are currently on. You can “detach” the HEAD by switching to a previous 
+commit, which we’ll see in the next video. Despite what it sounds like, it’s actually not a bad thing to detach
+the HEAD. Git just warns you so that you’ll realize you’re doing it.
+
+git checkout : temporarily changing the files to how they were at the time of any commit. Sort of like restoring a previous version
+Why checkout: incase a bug was introduced and you are not sure which commit brought it
+
+--How might using version control make you more confident to make changes that could break something?
+** you are confident because you can easily go back to the previous working code. It provides the confidence to go back and review
+what might have brought the mistake and fix it.
+
+--Now that you have your workspace set up, what do you want to try using Git for?
+** for managing my commit history
+** controlling versions of my code
+

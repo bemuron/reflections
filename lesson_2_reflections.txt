@@ -1,0 +1,3 @@
+--What happens when you initialize a repository? Why do you need to do it?
+The directory becomes a git directory whose history can be tracked by git. A hidden .git file is created within the directory.
+You need to do it because that is the only way to get git to be able to track files in that directory.
